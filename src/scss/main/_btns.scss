@@ -1,0 +1,49 @@
+.scroll_navi {
+	position: fixed;
+	top:50%;
+	transform: translateY(-50%);
+	right: -3%;
+	z-index: 3;
+
+	li {
+		display: inline-flex;
+		position: static;
+		right: 80%;
+		width: 100%;
+		margin: 18px;
+		cursor: pointer;
+		transition: 0.5s;
+		font: bold 25px/1 'arial';
+		color: #fff;
+		opacity: 0.5;
+
+		div {
+			width: 100%;
+			height: 10%;
+			margin: 0;
+		}
+		p{
+			position: relative;
+			right: 10px;
+		}
+
+		&.on {
+			height: 50px;
+			border: #fff;
+			font-size: 60px;
+			opacity: 1;
+
+			div {
+				width: 100%;
+				height: 33px;
+				border-bottom: 4px solid #fff;
+
+			}
+			p{
+				position: relative;
+				right: 31px;
+
+			}
+		}
+	}
+}
