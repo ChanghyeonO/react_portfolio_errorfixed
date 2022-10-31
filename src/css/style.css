@@ -297,12 +297,11 @@ header.main .inner .fa-bars {
 }
 
 #news {
+  position: relative;
   width: 100%;
   height: 100vh;
-  background: #555;
-  position: relative;
+  background-color: black;
   padding: 10vw;
-  opacity: 0.9;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -312,7 +311,7 @@ header.main .inner .fa-bars {
   display: block;
   width: 100%;
   text-align: center;
-  font: bold 60px/1 "arial";
+  font: bold 50px/1 "arial";
   color: #fff;
   margin-bottom: 20px;
 }
@@ -320,7 +319,7 @@ header.main .inner .fa-bars {
   display: block;
   width: 100%;
   text-align: center;
-  font: bold 30px/1 "arial";
+  font: normal 25px/1 "arial";
   color: #fff;
   margin-bottom: 30px;
 }
@@ -359,10 +358,8 @@ header.main .inner .fa-bars {
 #pics {
   width: 100%;
   height: 100vh;
-  background: #666;
   position: relative;
   padding: 10vw;
-  overflow: hidden;
 }
 #pics p {
   font: bold 110px/1 "arial";
@@ -378,6 +375,17 @@ header.main .inner .fa-bars {
   top: 150px;
   left: 100px;
   text-shadow: 20px 20px 50px rgba(0, 0, 0, 0.4);
+}
+#pics img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#pics #cover {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 25%, rgba(20, 20, 20, 0.5) 50%, rgba(0, 0, 0, 0.75) 75%, rgb(0, 0, 0) 100%);
 }
 
 #vids {
@@ -419,14 +427,35 @@ header.main .inner .fa-bars {
   z-index: 1;
   overflow: hidden;
 }
-#visual h1 {
-  font: bold 50px/1 "arial";
+#visual .text {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+}
+#visual .text h1 {
+  font-size: 100px;
+  font-weight: 900;
+  color: #fff;
+  margin-bottom: 20px;
+}
+#visual .text p {
+  font: bold 23px/1 "arial";
+  line-height: 28px;
+  color: #fff;
 }
 #visual video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.5;
+}
+#visual #cover {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 95%);
 }
 
 .scroll_navi {
@@ -499,7 +528,6 @@ header.main .inner .fa-bars {
   cursor: pointer;
   margin-left: 20px;
   border-radius: 10px;
-  float: right;
 }
 .Community > .inner .showBox {
   width: 100%;
@@ -573,21 +601,21 @@ header.main .inner .fa-bars {
     margin-left: 0px;
   }
 }
-.About > .inner::after {
+.Department > .inner::after {
   content: "";
   display: block;
   clear: both;
 }
-.About > .inner article {
+.Department > .inner article {
   width: 33.333%;
   float: left;
   padding: 10px;
   margin-bottom: 50px;
 }
-.About > .inner article .inner {
+.Department > .inner article .inner {
   width: 100%;
 }
-.About > .inner article .inner .pic {
+.Department > .inner article .inner .pic {
   width: 100%;
   height: 350px;
   background: #111;
@@ -596,18 +624,39 @@ header.main .inner .fa-bars {
   transition: 0.5s;
   border-radius: 50%;
 }
-.About > .inner article .inner .pic:hover {
+.Department > .inner article .inner .pic:hover {
   filter: saturate(1.1);
   border-radius: 50%;
 }
-.About > .inner article .inner .pic img {
+.Department > .inner article .inner .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 100%;
 }
-.About > .inner article .inner h3 {
+.Department > .inner article .inner h3 {
+  font: bold 35px/1 "arial";
   text-align: center;
+}
+.Department > .inner article .inner .instagram {
+  float: left;
+  margin-top: 20px;
+  margin-left: 33%;
+  width: 105px;
+  cursor: pointer;
+}
+.Department > .inner article .inner .instagram :hover {
+  color: rgb(255, 106, 0);
+  transition: 0.2s;
+}
+.Department > .inner article .inner .twitter {
+  float: left;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.Department > .inner article .inner .twitter :hover {
+  color: rgb(0, 217, 255);
+  transition: 0.2s;
 }
 
 @media screen and (max-width: 1179px) {
@@ -647,34 +696,38 @@ header.main .inner .fa-bars {
 }
 .Gallery .controls nav button {
   border: none;
-  width: 130px;
-  height: 30px;
+  width: 150px;
+  height: 40px;
   background: #555;
-  font: 12px/30px "arial";
-  color: #ddd;
+  font: 17px/30px "arial";
+  color: #fff;
   text-align: center;
   cursor: pointer;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 .Gallery .controls .searchBox {
   padding-right: 15px;
 }
 .Gallery .controls .searchBox input {
   width: 200px;
-  height: 26px;
+  height: 40px;
   background: #fff;
   border: 1px solid #bbb;
-  padding: 3px 8px;
+  font-size: 15px;
+  padding: 20px 13px;
+  border-radius: 10px;
 }
 .Gallery .controls .searchBox button {
   width: 80px;
-  height: 26px;
+  height: 40px;
   border: none;
   background: #555;
-  font: 12px/26px "arial";
+  font: 17px/26px "arial";
   color: #fff;
   cursor: pointer;
   margin-left: 5px;
+  border-radius: 10px;
 }
 .Gallery .frame {
   transform: translateY(200px);
@@ -700,6 +753,7 @@ header.main .inner .fa-bars {
   padding: 10px;
   background: #fff;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
 }
 .Gallery .frame article .inner .pic {
   width: 100%;
@@ -707,10 +761,11 @@ header.main .inner .fa-bars {
 }
 .Gallery .frame article .inner .pic img {
   width: 100%;
+  border-radius: 10px;
 }
 .Gallery .frame article .inner h2 {
-  font: normal 14px/1.2 "arial";
-  color: #777;
+  font: bold 20px/1.2 "arial";
+  color: #000;
   margin-bottom: 30px;
 }
 .Gallery .frame article .inner .profile {
@@ -719,8 +774,8 @@ header.main .inner .fa-bars {
 }
 .Gallery .frame article .inner .profile img {
   width: 40px;
-  border-radius: 50%;
   margin-right: 10px;
+  border-radius: 10px;
 }
 .Gallery .frame article .inner .profile span {
   color: orange;

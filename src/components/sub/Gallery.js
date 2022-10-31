@@ -91,7 +91,7 @@ export default function Gallery() {
                 {Loading && (
                     <img
                         className="loading"
-                        src={`${process.env.PUBLIC_URL}/img/6.gif`}
+                        src={`${process.env.PUBLIC_URL}/img/ball.gif`}
                     />
                 )}
 
@@ -107,7 +107,7 @@ export default function Gallery() {
                                 frame.current.classList.remove('on');
                                 getFlickr({ type: 'interest' });
                             }}
-                        >
+                            className={'interest'}>
                             Interest Gallery
                         </button>
                         <button
@@ -118,7 +118,7 @@ export default function Gallery() {
                                 frame.current.classList.remove('on');
                                 getFlickr({ type: 'user', user: '164021883@N04' });
                             }}
-                        >
+                            className={'my'}>
                             My Gallery
                         </button>
                     </nav>

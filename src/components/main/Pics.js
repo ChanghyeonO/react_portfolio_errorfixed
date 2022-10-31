@@ -8,21 +8,24 @@ function Pics({ Scrolled, start }) {
     return (
         <main id="pics" className='myScroll'>
             <p style={{
-                    left: 50 + position,
-                }}
+                left: 50 + position,
+            }}
             >
-            DISCOVER THE <br/>
-            WORLD IN A <br/>
-            NEW WAY
+                DISCOVER THE <br />
+                WORLD IN A <br />
+                NEW WAY
             </p>
             <h3 style={{
-                    left: 100 + position / 2,
-                }}
+                left: 100 + position / 2,
+            }}
             >
-            DISCOVER THE <br/>
-            WORLD IN A <br/>
-            NEW WAY   
+                DISCOVER THE <br />
+                WORLD IN A <br />
+                NEW WAY
             </h3>
+            <div id="cover">
+            </div>
+            <img src={process.env.PUBLIC_URL + '/img/community.jpg'} />
         </main>
     );
 }
