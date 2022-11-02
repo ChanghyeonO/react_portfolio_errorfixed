@@ -25,7 +25,7 @@ function Pics({ Scrolled, start }) {
             </h3>
             <div id="cover">
             </div>
-            <img src={process.env.PUBLIC_URL + '/img/community.jpg'} />
+            <img src={process.env.PUBLIC_URL + '/img/uyuni.jpg'} />
         </main>
     );
 }

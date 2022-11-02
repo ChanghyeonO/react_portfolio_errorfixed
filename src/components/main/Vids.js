@@ -3,6 +3,7 @@ import { Pagination, Navigation } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import { useEffect, useState, useRef } from "react";
 
 function Vids() {
     return (
@@ -20,14 +21,13 @@ function Vids() {
                 slidesPerView={3}
                 centeredSlides={true}
             >
-                <SwiperSlide>
-                    <div className="inner">1</div>
-                </SwiperSlide>
-                <SwiperSlide><div className="inner">2</div></SwiperSlide>
-                <SwiperSlide><div className="inner">3</div></SwiperSlide>
-                <SwiperSlide><div className="inner">4</div></SwiperSlide>
-                <SwiperSlide><div className="inner">5</div></SwiperSlide>
+                <SwiperSlide><div className="inner"></div></SwiperSlide>
+                <SwiperSlide><div className="inner"></div></SwiperSlide>
+                <SwiperSlide><div className="inner"></div></SwiperSlide>
+                <SwiperSlide><div className="inner"></div></SwiperSlide>
+                <SwiperSlide><div className="inner"></div></SwiperSlide>
             </Swiper>
+            {/* <video src={process.env.PUBLIC_URL + '/img/sky.mp4'} loop autoPlay muted></video> */}
         </main>
     );
 }

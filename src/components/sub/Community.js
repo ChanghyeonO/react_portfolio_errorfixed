@@ -5,8 +5,20 @@ export default function Community() {
 
 
     const getLocalData = () => {
-        const data = localStorage.getItem('post');
-        return JSON.parse(data);
+        const dummyPosts = [
+            { title: 'TITLE01', content: "HERE COMES DESCRIPTION IN DETAILS." },
+            { title: 'TITLE02', content: "HERE COMES DESCRIPTION IN DETAILS." },
+            { title: 'TITLE03', content: "HERE COMES DESCRIPTION IN DETAILS." },
+            { title: 'TITLE04', content: "HERE COMES DESCRIPTION IN DETAILS." },
+            { title: 'TITLE05', content: "HERE COMES DESCRIPTION IN DETAILS." },
+            { title: 'TITLE06', content: "HERE COMES DESCRIPTION IN DETAILS." }
+        ]
+        // 로컬 스토리지 데이터 불러오기
+        let data = localStorage.getItem('post');
+        // 로컬 데이터 없으면 더미 데이터 넣기
+        data = data ? JSON.parse(data) : dummyPosts;
+        return data;
+
     };
     /*
     보통 데이터들은 새로고침이나 재접속시 초기화 된다. < --- session storage 브라우저를 종료하면 날라가는 휘발성 저장공간
@@ -116,6 +128,7 @@ export default function Community() {
             })
         );
     };
+
 
 
     //Posts의 값이 변경될때마다 콘솔출력해서 우리가 볼 수 있는 

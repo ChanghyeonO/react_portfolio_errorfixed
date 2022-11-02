@@ -1,12 +1,23 @@
 #vids {
+	position: relative;
 	width: 100%;
 	height: 100vh;
 	background: #444;
-	position: relative;
 	padding: 10vw;
-
-	.swiper {
+	background: linear-gradient(
+		to top,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(0, 0, 0, 0.35) 25%,
+		rgba(20, 20, 20, 0.2) 50%,
+		rgba(0, 0, 0, 0.85) 75%,
+		rgba(0, 0, 0, 1) 100%
+	);
+	video {
+		width: 100%;
 		height: 100%;
+	}
+	.swiper {
+		height: 80%;
 		.swiper-slide {
 			width: 100%;
 			.inner {

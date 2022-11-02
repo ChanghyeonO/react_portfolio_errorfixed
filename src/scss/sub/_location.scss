@@ -1,4 +1,5 @@
 .Location {
+	background: #fff;
 	figure {
 		background: lightblue;
 	}
@@ -7,6 +8,7 @@
 		width: 100%;
 		height: 500px;
 		background: #000;
+		border-radius: 10px;
 	}
 	.btnSet {
 		display: flex;
@@ -14,6 +16,7 @@
 		align-content: flex-start;
 		justify-content: space-between;
 		margin-top: 50px;
+		// margin-right:
 
 		button {
 			cursor: pointer;
