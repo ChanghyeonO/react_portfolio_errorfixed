@@ -9,7 +9,7 @@
 			width: 44%;
 			font-weight: bold;
 			font-size: 22px;
-			font-family: 'work sans';
+			font-family: "work sans";
 			color: #777;
 		}
 		.txt {
@@ -18,17 +18,17 @@
 			flex-wrap: wrap;
 			align-content: space-between;
 			p {
-				font: 14px/1.2 'arial';
+				font: 14px/1.2 "arial";
 				color: #999;
 				filter: saturate(0);
 			}
 			span {
-				font: 12px/1 'arial';
+				font: 12px/1 "arial";
 				color: orange;
 			}
 		}
 		.pic {
-			width: 40%;
+			width: 32%;
 			height: 200px;
 			background: #000;
 			filter: saturate(0);
