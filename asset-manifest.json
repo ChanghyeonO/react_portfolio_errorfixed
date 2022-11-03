@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react_portfolio_errorfixed/static/css/main.8b5d34a9.css",
+    "main.css": "/react_portfolio_errorfixed/static/css/main.e4937f1b.css",
     "main.js": "/react_portfolio_errorfixed/static/js/main.e9984b37.js",
     "static/media/news4.jpg": "/react_portfolio_errorfixed/static/media/news4.39d9a00213409e61a3ef.jpg",
     "static/media/news1.jpg": "/react_portfolio_errorfixed/static/media/news1.bf8ad6751d08c8ab6a28.jpg",
@@ -8,11 +8,11 @@
     "static/media/news3.jpg": "/react_portfolio_errorfixed/static/media/news3.37e919c5040f2c49b3ad.jpg",
     "static/media/news5.jpg": "/react_portfolio_errorfixed/static/media/news5.c43207a4065abeddbbca.jpg",
     "index.html": "/react_portfolio_errorfixed/index.html",
-    "main.8b5d34a9.css.map": "/react_portfolio_errorfixed/static/css/main.8b5d34a9.css.map",
+    "main.e4937f1b.css.map": "/react_portfolio_errorfixed/static/css/main.e4937f1b.css.map",
     "main.e9984b37.js.map": "/react_portfolio_errorfixed/static/js/main.e9984b37.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b5d34a9.css",
+    "static/css/main.e4937f1b.css",
     "static/js/main.e9984b37.js"
   ]
 }
