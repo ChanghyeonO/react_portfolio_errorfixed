@@ -66,6 +66,7 @@ function Vids() {
           )}
         </Popup>
       </Swiper>
+      <video src={process.env.PUBLIC_URL + '/img/sky.mp4'} loop autoPlay muted></video>
     </main>
   );
 }
