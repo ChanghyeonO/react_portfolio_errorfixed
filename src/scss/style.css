@@ -686,13 +686,13 @@ header.main .inner .fa-bars {
 .Department > .inner article .inner .instagram {
   float: left;
   margin-top: 20px;
-  margin-left: 33%;
-  width: 105px;
+  margin-left: 84px;
+  width: 100px;
   cursor: pointer;
 }
 .Department > .inner article .inner .instagram :hover {
   color: rgb(255, 106, 0);
-  transition: 0.2s;
+  transition: 0.1s;
 }
 .Department > .inner article .inner .twitter {
   float: left;
@@ -701,7 +701,7 @@ header.main .inner .fa-bars {
 }
 .Department > .inner article .inner .twitter :hover {
   color: rgb(0, 217, 255);
-  transition: 0.2s;
+  transition: 0.1s;
 }
 
 @media screen and (max-width: 1179px) {

@@ -57,7 +57,7 @@ function Vids() {
             </SwiperSlide>
           );
         })}
-        <Popup ref={pop}>
+        <Popup ref={pop} className='popup'>
           {Vids.length !== 0 && (
             <iframe
               src={`https://www.youtube.com/embed/${Vids[Index].snippet.resourceId.videoId}`}

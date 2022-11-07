@@ -18,12 +18,14 @@ function News() {
             {Posts.map(({ title, content, imageSrc }, index) =>
             (
                 <article key={index}>
-                    <img src={imageSrc} alt="PopularTourImg" style={{
-                        position: "absolute",
-                        width: "100%",
-                        height: "250px",
-                        objectFit: "cover"
-                    }} />
+                    <div className="inner">
+                        <img src={imageSrc} alt="PopularTourImg" style={{
+                            position: "absolute",
+                            width: "100%",
+                            height: "250px",
+                            objectFit: "cover"
+                        }} />
+                    </div>
                 </article>
             )
             )}

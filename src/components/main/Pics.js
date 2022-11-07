@@ -10,6 +10,7 @@ function Pics({ Scrolled, start }) {
             <p style={{
                 left: 50 + position,
             }}
+
             >
                 DISCOVER THE <br />
                 WORLD IN A <br />
@@ -26,7 +27,7 @@ function Pics({ Scrolled, start }) {
             <div id="cover">
             </div>
             <img src={process.env.PUBLIC_URL + '/img/uyuni.jpg'} />
-        </main>
+        </main >
     );
 }
 export default Pics;
