@@ -28,7 +28,7 @@ function Vids() {
       <Swiper
         modules={[Pagination, Navigation]}
         pagination={{
-          clickable: true,
+          clickable: false,
         }}
         spaceBetween={60}
         navigation={true}

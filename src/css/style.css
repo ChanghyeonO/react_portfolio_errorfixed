@@ -548,29 +548,26 @@ header.main .inner .fa-bars {
 
 .Community > .inner {
   border: 2px solid #000;
-  border-radius: 10%;
   width: 80%;
   padding: 3%;
 }
 .Community > .inner .inputBox {
   width: 100%;
-  border: 1px solid #bbb;
   padding: 50px;
   margin-bottom: 50px;
-  border-radius: 100px;
 }
 .Community > .inner .inputBox input[type=text],
 .Community > .inner .inputBox textarea {
   width: 100%;
   padding: 15px 20px;
-  border: 1px solid #aaa;
   margin-bottom: 10px;
   resize: none;
-  border-radius: 15px;
   font: bold 15px/1 "arial";
 }
 .Community > .inner .inputBox .btnSet button {
-  width: 250px;
+  position: relative;
+  left: -20px;
+  width: 200px;
   height: 40px;
   display: inline-block;
   border: 1px solid #aaa;
@@ -578,13 +575,11 @@ header.main .inner .fa-bars {
   color: #000;
   cursor: pointer;
   margin-left: 20px;
-  border-radius: 30px;
 }
 .Community > .inner .showBox {
   width: 100%;
   border: 1px solid #bbb;
   padding: 50px;
-  border-radius: 100px;
 }
 .Community > .inner .showBox article {
   background: #fff;
@@ -608,7 +603,6 @@ header.main .inner .fa-bars {
   margin-bottom: 20px;
   background: #ddd;
   resize: none;
-  border-radius: 10px;
 }
 .Community > .inner .showBox article .btnSet {
   display: flex;
@@ -654,7 +648,6 @@ header.main .inner .fa-bars {
 }
 .Department > .inner {
   border: 2px solid #000;
-  border-radius: 10%;
   width: 80%;
   padding: 3%;
 }
