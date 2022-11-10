@@ -444,18 +444,24 @@ header.main .inner .fa-bars {
   transition: opacity 0.5s, transform 0.5s;
   transition: 0.5s;
   cursor: pointer;
+  filter: grayscale(1);
 }
 #vids .swiper .swiper-slide .inner img {
-  border-radius: 2%;
+  border-radius: 5px;
 }
 #vids .swiper .swiper-slide.swiper-slide-active .inner {
   opacity: 1;
   transform: scale(1);
   z-index: 1;
 }
+#vids .swiper .swiper-slide.swiper-slide-active .inner:hover {
+  filter: grayscale(0);
+  transform: scale(1.05);
+  transition: 0.9s;
+}
 #vids .swiper .popup {
-  position: relative;
-  z-index: 3;
+  position: absolute;
+  z-index: 10;
 }
 
 #visual {
