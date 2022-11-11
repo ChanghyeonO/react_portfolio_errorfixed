@@ -40,3 +40,18 @@
 		);
 	}
 }
+
+@media screen and (max-width: $tablet) {
+	#visual {
+		.text {
+			h1 {
+				position: relative;
+				right: 6%;
+			}
+			p {
+				position: relative;
+				right: 6%;
+			}
+		}
+	}
+}
