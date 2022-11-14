@@ -20,12 +20,12 @@
 		position: relative;
 		opacity: 0;
 		transform: translateY(100px);
-		//transition: opacity 0.5s, transform 1s;
+		transition: opacity 0.5s, transform 1s;
 		transition: 0.5s;
 		h1 {
-			font: normal 60px/1 "work sans";
+			font: bold 100px/1 "Sans-serif";
 			color: #111;
-			margin-bottom: 70px;
+			margin-bottom: 50px;
 			&::after {
 				content: "";
 				display: block;
@@ -56,6 +56,13 @@
 			width: 100%;
 			margin: 80px auto 120px;
 			padding: 0px 40px;
+
+			h1 {
+				position: relative;
+				display: inline-block;
+				font: bold 60px/1 "Sans-serif";
+				left: 20%;
+			}
 		}
 	}
 }
