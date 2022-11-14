@@ -10,21 +10,21 @@ export default function Location() {
             title: '삼성동 코엑스',
             latlng: new kakao.maps.LatLng(37.5116828, 127.059151),
             imgUrl: `${process.env.PUBLIC_URL}/img/marker.png`,
-            imgSize: new kakao.maps.Size(232, 99),
+            imgSize: new kakao.maps.Size(63, 99),
             imgPos: { offset: new kakao.maps.Point(116, 99) }
         },
         {
             title: '올림픽 공원',
             latlng: new kakao.maps.LatLng(37.5206868, 127.1214941),
             imgUrl: `${process.env.PUBLIC_URL}/img/marker.png`,
-            imgSize: new kakao.maps.Size(232, 99),
+            imgSize: new kakao.maps.Size(63, 99),
             imgPos: { offset: new kakao.maps.Point(116, 99) }
         },
         {
             title: '서울 시청',
             latlng: new kakao.maps.LatLng(37.5662952, 126.9779451),
-            imgUrl: `${process.env.PUBLIC_URL}/img/marker3.png`,
-            imgSize: new kakao.maps.Size(232, 99),
+            imgUrl: `${process.env.PUBLIC_URL}/img/marker.png`,
+            imgSize: new kakao.maps.Size(63, 99),
             imgPos: { offset: new kakao.maps.Point(116, 99) }
         },
     ];
