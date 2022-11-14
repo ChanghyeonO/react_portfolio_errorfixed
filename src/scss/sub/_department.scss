@@ -1,6 +1,5 @@
 .Department {
 	> .inner {
-		border: 2px solid #000;
 		width: 80%;
 		padding: 3%;
 		&::after {
@@ -9,11 +8,12 @@
 			clear: both;
 		}
 		article {
+			position: relative;
 			width: 33.333%;
 			float: left;
 			padding: 10px;
 			margin-bottom: 50px;
-
+			// background-color: #000;
 			.inner {
 				width: 300px;
 				margin: auto;

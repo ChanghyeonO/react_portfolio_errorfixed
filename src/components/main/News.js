@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { News1, News2, News3, News4, News5 } from '../../asset/index';
 
 
@@ -15,7 +14,7 @@ function News() {
         <main id="news" className='myScroll'>
             <h1>POPULAR TOUR</h1>
             <h2>There will be a small title here</h2>
-            {Posts.map(({ title, content, imageSrc }, index) =>
+            {Posts.map(({ imageSrc }, index) =>
             (
                 <article key={index}>
                     <div className="inner">

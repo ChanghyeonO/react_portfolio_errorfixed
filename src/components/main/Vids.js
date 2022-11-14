@@ -24,50 +24,53 @@ function Vids() {
   }, []);
 
   return (
-    <main id="vids" className="myScroll">
-      <Swiper
-        modules={[Pagination, Navigation]}
-        pagination={{
-          clickable: false,
-        }}
-        spaceBetween={60}
-        navigation={true}
-        loop={true}
-        slidesPerView={3}
-        centeredSlides={true}
-      >
-        {Vids.map((data, index) => {
-          return (
-            <SwiperSlide>
-              <article key={index}>
-                <div
-                  key={index}
-                  className="inner"
-                  onClick={() => {
-                    pop.current.open();
-                    setIndex(index);
-                  }}
-                >
-                  <img
-                    src={data.snippet.thumbnails.standard.url}
-                    alt={data.snippet.title}
-                  />
-                </div>
-              </article>
-            </SwiperSlide>
-          );
-        })}
-        <Popup ref={pop} className='popup'>
-          {Vids.length !== 0 && (
-            <iframe
-              src={`https://www.youtube.com/embed/${Vids[Index].snippet.resourceId.videoId}`}
-              frameBorder="0"
-            ></iframe>
-          )}
-        </Popup>
-      </Swiper>
-      <video src={process.env.PUBLIC_URL + '/img/sky.mp4'} loop autoPlay muted></video>
-    </main>
+    <>
+      <main id="vids" className="myScroll">
+        <Swiper
+          modules={[Pagination, Navigation]}
+          pagination={{
+            clickable: false,
+          }}
+          spaceBetween={60}
+          navigation={true}
+          loop={true}
+          slidesPerView={3}
+          centeredSlides={true}
+        >
+          {Vids.map((data, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <article>
+                  <div
+                    key={index}
+                    className="inner"
+                    onClick={() => {
+                      pop.current.open();
+                      setIndex(index);
+                    }}
+                  >
+                    <img
+                      src={data.snippet.thumbnails.standard.url}
+                      alt={data.snippet.title}
+                    />
+                  </div>
+                </article>
+              </SwiperSlide>
+            );
+          })}
+
+        </Swiper>
+        <video src={process.env.PUBLIC_URL + '/img/sky.mp4'} loop autoPlay muted></video>
+      </main>
+      <Popup ref={pop} className='popup'>
+        {Vids.length !== 0 && (
+          <iframe
+            src={`https://www.youtube.com/embed/${Vids[Index].snippet.resourceId.videoId}`}
+            frameBorder="0"
+          ></iframe>
+        )}
+      </Popup>
+    </>
   );
 }
 export default Vids;
