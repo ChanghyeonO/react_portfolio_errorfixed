@@ -45,7 +45,7 @@
 					margin-left: 84px;
 					width: 100px;
 					cursor: pointer;
-					:hover {
+					&:hover {
 						color: rgb(255, 106, 0);
 						transition: 0.15s;
 					}
@@ -54,7 +54,7 @@
 					float: left;
 					margin-top: 20px;
 					cursor: pointer;
-					:hover {
+					&:hover {
 						color: rgb(0, 217, 255);
 						transition: 0.15s;
 					}
@@ -74,6 +74,10 @@
 					.pic {
 						height: 260px;
 					}
+					.instagramicon {
+						position: relative;
+						right: 80px;
+					}
 				}
 			}
 		}
@@ -85,7 +89,7 @@
 		> .inner {
 			article {
 				width: 100%;
-				margin-bottom: 30px;
+				margin-bottom: 50px;
 				.inner {
 					.pic {
 						height: 200px;

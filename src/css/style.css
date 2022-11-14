@@ -73,7 +73,7 @@ footer .inner address {
   margin-bottom: 20px;
   margin-top: 20px;
   padding-top: 20px;
-  border-top: 1px solid #111;
+  border-top: 3px solid #111;
 }
 footer .inner p {
   float: left;
@@ -86,6 +86,15 @@ footer .inner p {
   footer .inner {
     width: 100%;
     padding: 0px 40px;
+  }
+  footer .inner h1 {
+    position: relative;
+    bottom: 10px;
+  }
+  footer .inner ul {
+    position: relative;
+    top: 10px;
+    right: 15%;
   }
 }
 .content figure {
@@ -143,9 +152,8 @@ footer .inner p {
   }
   .content .inner h1 {
     position: relative;
-    display: inline-block;
     font: bold 60px/1 "Sans-serif";
-    left: 20%;
+    text-align: center;
   }
 }
 header {
@@ -736,7 +744,7 @@ header.main .inner .fa-bars {
   width: 100px;
   cursor: pointer;
 }
-.Department > .inner article .inner .instagram :hover {
+.Department > .inner article .inner .instagram:hover {
   color: rgb(255, 106, 0);
   transition: 0.15s;
 }
@@ -745,7 +753,7 @@ header.main .inner .fa-bars {
   margin-top: 20px;
   cursor: pointer;
 }
-.Department > .inner article .inner .twitter :hover {
+.Department > .inner article .inner .twitter:hover {
   color: rgb(0, 217, 255);
   transition: 0.15s;
 }
@@ -758,11 +766,15 @@ header.main .inner .fa-bars {
   .Department > .inner article .inner .pic {
     height: 260px;
   }
+  .Department > .inner article .inner .instagramicon {
+    position: relative;
+    right: 80px;
+  }
 }
 @media screen and (max-width: 539px) {
   .Department > .inner article {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
   }
   .Department > .inner article .inner .pic {
     height: 200px;

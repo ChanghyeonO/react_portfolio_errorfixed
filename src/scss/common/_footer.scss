@@ -39,7 +39,7 @@ footer {
 			margin-bottom: 20px;
 			margin-top: 20px;
 			padding-top: 20px;
-			border-top: 1px solid #111;
+			border-top: 3px solid #111;
 		}
 
 		p {
@@ -56,6 +56,15 @@ footer {
 		.inner {
 			width: 100%;
 			padding: 0px 40px;
+			h1 {
+				position: relative;
+				bottom: 10px;
+			}
+			ul {
+				position: relative;
+				top: 10px;
+				right: 15%;
+			}
 		}
 	}
 }

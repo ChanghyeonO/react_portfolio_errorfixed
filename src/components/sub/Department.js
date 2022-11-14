@@ -28,12 +28,12 @@ export default function Department() {
                                 <img src={`${path}/img/${data.pic}`} alt={data.name} />
                             </div>
                             <h3>{data.name}</h3>
-                            <a src="#" > {instagram.map((instagram, idx) => (
+                            <a src="#" className="instagramicon" > {instagram.map((instagram, idx) => (
                                 <li key={idx} className="instagram">
                                     <FontAwesomeIcon icon={instagram} size="2x" />
                                 </li>
                             ))}</a>
-                            <a src="#" > {twitter.map((twitter, idx) => (
+                            <a src="#" className="twittericon"> {twitter.map((twitter, idx) => (
                                 <li key={idx} className="twitter">
                                     <FontAwesomeIcon icon={twitter} size="2x" />
                                 </li>
