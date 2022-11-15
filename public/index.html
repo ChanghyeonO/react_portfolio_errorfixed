@@ -13,7 +13,7 @@
   <noscript>You need to enable JavaScript to run this app.</noscript>
   <div id="root"></div>
   <div class="defaults"></div>
-  <div class="mask">LOADING...</div>
+  <div class="mask">로딩중입니다...</div>
 
   <style>
     .defaults {
@@ -47,25 +47,31 @@
     const defaults = document.querySelector('.defaults');
     const mask = document.querySelector('.mask');
     let tags = '';
-    const baseURL = 'https://dcodelabTutor.github.io/react_9class/img/';
-    //const baseURL = 'http://localhost:3000/react_9class#/img/'
-    const imgs = [
-      baseURL + 'Community.jpg',
-      baseURL + 'Department.jpg',
-      baseURL + 'Gallery.jpg',
-      baseURL + 'Location.jpg',
-      baseURL + 'Youtube.jpg',
-      baseURL + 'Member.jpg',
-    ];
+    const baseURL = 'https://changhyeono.github.io/react_portfolio_errorfixed/img/';
+    // const baseURL = ''
+    // const imgs = [
+    //   baseURL + 'Community.jpg',
+    //   baseURL + 'Department.jpg',
+    //   baseURL + 'Gallery.jpg',
+    //   baseURL + 'Location.jpg',
+    //   baseURL + 'Youtube.jpg',
+    //   baseURL + 'Member.jpg',
+    // ];
     const vids = [
-      baseURL + 'vid2.mp4'
+      baseURL + 'vid2.mp4',
+      baseURL + 'Community.mp4',
+      baseURL + 'Department.mp4',
+      baseURL + 'Gallery.mp4',
+      baseURL + 'Location.mp4',
+      baseURL + 'Youtube.mp4',
+      baseURL + 'Member.mp4',
     ];
 
     createDOM();
     endLoading();
 
     function createDOM() {
-      imgs.forEach(src => tags += `<img src=${src} />`);
+      // imgs.forEach(src => tags += `<img src=${src} />`);
       vids.forEach(src => tags += `<video src=${src}></video>`);
       defaults.innerHTML = tags;
     }
@@ -112,7 +118,7 @@
       setTimeout(() => {
         mask.remove();
         defaults.remove();
-      }, 2000)
+      }, 500)
 
     }
   </script>

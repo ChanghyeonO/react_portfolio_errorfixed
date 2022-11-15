@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/react_portfolio_errorfixed/static/css/main.a5299f04.css",
-    "main.js": "/react_portfolio_errorfixed/static/js/main.7e913ed9.js",
+    "main.css": "/react_portfolio_errorfixed/static/css/main.03de943a.css",
+    "main.js": "/react_portfolio_errorfixed/static/js/main.d3e7ce86.js",
     "static/media/news4.jpg": "/react_portfolio_errorfixed/static/media/news4.7503ecdb906505342b8c.jpg",
     "static/media/news1.jpg": "/react_portfolio_errorfixed/static/media/news1.bf761de6177a5ddc9814.jpg",
     "static/media/news3.jpg": "/react_portfolio_errorfixed/static/media/news3.f0e951f1781cc1c18114.jpg",
     "static/media/news2.jpg": "/react_portfolio_errorfixed/static/media/news2.db48194d0f08e4f7aab7.jpg",
     "static/media/news5.jpg": "/react_portfolio_errorfixed/static/media/news5.83b72b5be31d8a7bae32.jpg",
     "index.html": "/react_portfolio_errorfixed/index.html",
-    "main.a5299f04.css.map": "/react_portfolio_errorfixed/static/css/main.a5299f04.css.map",
-    "main.7e913ed9.js.map": "/react_portfolio_errorfixed/static/js/main.7e913ed9.js.map"
+    "main.03de943a.css.map": "/react_portfolio_errorfixed/static/css/main.03de943a.css.map",
+    "main.d3e7ce86.js.map": "/react_portfolio_errorfixed/static/js/main.d3e7ce86.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5299f04.css",
-    "static/js/main.7e913ed9.js"
+    "static/css/main.03de943a.css",
+    "static/js/main.d3e7ce86.js"
   ]
 }

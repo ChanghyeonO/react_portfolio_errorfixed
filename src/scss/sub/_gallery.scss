@@ -119,6 +119,22 @@
 	section .frame article {
 		width: 33.3333%;
 	}
+	.Gallery {
+		.controls {
+			.searchBox {
+				input {
+					position: relative;
+					// top: 10%;
+					// width: 100%;
+				}
+
+				button {
+					position: relative;
+					border: 50px;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (max-width: $mobile) {

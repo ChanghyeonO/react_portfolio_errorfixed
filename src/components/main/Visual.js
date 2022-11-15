@@ -13,7 +13,7 @@ export default function Visual() {
             </div>
             <div id="cover">
             </div>
-            <video src={process.env.PUBLIC_URL + '/img/vid3.mp4'} loop autoPlay muted></video>
+            <video src={process.env.PUBLIC_URL + '/img/vid3.mp4'} loop autoPlay muted playsInline></video>
         </figure>
     )
 }
