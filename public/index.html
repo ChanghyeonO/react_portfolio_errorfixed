@@ -72,7 +72,7 @@
 
     function createDOM() {
       //imgs.forEach(src => tags += `<img src=${src} />`);
-      vids.forEach(src => tags += `<video src=${src}></video>`);
+      vids.forEach(src => tags += `<video src=${src} muted playsInline></video>`);
       defaults.innerHTML = tags;
     }
 
