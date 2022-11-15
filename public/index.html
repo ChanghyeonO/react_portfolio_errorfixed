@@ -71,7 +71,7 @@
     endLoading();
 
     function createDOM() {
-      // imgs.forEach(src => tags += `<img src=${src} />`);
+      imgs.forEach(src => tags += `<img src=${src} />`);
       vids.forEach(src => tags += `<video src=${src}></video>`);
       defaults.innerHTML = tags;
     }
