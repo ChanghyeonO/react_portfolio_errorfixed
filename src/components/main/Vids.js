@@ -65,7 +65,7 @@ function Vids() {
               })}
           </Swiper>
         )}
-        <video src={process.env.PUBLIC_URL + '/img/sky.mp4'} loop autoPlay muted></video>
+        <video src={process.env.PUBLIC_URL + '/img/sky.mp4'} loop autoPlay muted playsInline></video>
       </main>
 
       <Popup ref={pop}>
