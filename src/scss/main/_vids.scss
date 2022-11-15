@@ -1,7 +1,7 @@
 #vids {
 	position: relative;
 	width: 100%;
-	height: 100vh;
+	height: 110vh;
 	background-color: transparent;
 	padding-top: 15vh;
 	background: linear-gradient(
@@ -22,39 +22,78 @@
 		object-fit: cover;
 	}
 	.swiper {
-		padding: 22px;
-		width: 60%;
-		height: 550px;
+		height: 100%;
+		padding: 20vh 0px;
+
 		.swiper-slide {
+			width: 600px;
+
 			.inner {
-				position: relative;
-				display: flex;
-				justify-content: center;
-				opacity: 0.08;
+				width: 100%;
+				height: 100%;
+				padding: 30px;
+				opacity: 0.1;
 				transform: scale(0.8);
-				transition: opacity 0.5s;
-				transition: 0.5s;
-				cursor: pointer;
-				filter: grayscale(0.8);
-				img {
-					border-radius: 5px;
+				transition: opacity 0.5s, transform 0.5s;
+				pointer-events: none;
+
+				.pic {
+					width: 100%;
+					height: 300px;
+					overflow: hidden;
+					margin-bottom: 20px;
+					cursor: pointer;
+					border-radius: 8px;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+
+				h2 {
+					font: bold 30px/1 "Monaco";
+					color: #fff;
 				}
 			}
 			&.swiper-slide-active {
 				.inner {
 					opacity: 1;
 					transform: scale(1);
-					z-index: 1;
-					&:hover {
-						filter: grayscale(0);
-						transform: scale(1.05);
-						transition: 0.9s;
-					}
+					pointer-events: auto;
 				}
 			}
 		}
-		.popup {
-			position: absolute;
+
+		.swiper-pagination {
+			bottom: 50px;
+			filter: grayscale(1) brightness(4);
+			z-index: 5;
+
+			.swiper-pagination-bullet {
+				border-radius: 10px;
+				transition: 0.5s;
+				background: #fff;
+				width: 30px;
+			}
+
+			.swiper-pagination-bullet-active {
+				width: 150px;
+			}
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			right: 27%;
+			top: 45%;
+			transform: scale(1);
+			filter: grayscale(1) brightness(4);
+			z-index: 6;
+		}
+		.swiper-button-prev {
+			left: 27%;
+			top: 45%;
 		}
 	}
 }

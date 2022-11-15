@@ -1,4 +1,6 @@
 import { Route, Switch } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
 //common
 import Header from './components/common/Header';
@@ -17,9 +19,18 @@ import Gallery from './components/sub/Gallery';
 import Location from './components/sub/Location';
 import Member from './components/sub/Member';
 import Youtube from './components/sub/Youtube';
+import * as types from './redux/actionType';
 
 import './scss/style.scss';
 function App() {
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch({ type: types.MEMBERS.start });
+		dispatch({ type: types.YOUTUBE.start })
+		dispatch({ type: types.FLICKR.start, Opt: { type: 'user', user: '196624791@N05' } })
+	}, []);
+
 	return (
 		<>
 			{/* Switch는 같은 경로의 라우터 연결시 구체적인 라우터 하나만 적용한다 */}

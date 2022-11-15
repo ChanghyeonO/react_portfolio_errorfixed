@@ -1,73 +1,76 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { useEffect, useState, useRef } from "react";
-import axios from "axios";
-import Popup from "../common/Popup";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation, Autoplay } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { useSelector } from 'react-redux';
+import Popup from '../common/Popup';
+import { useRef, useState } from 'react';
 
 function Vids() {
   const pop = useRef(null);
-  const [Vids, setVids] = useState([]);
+  const sw = useRef(null);
   const [Index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const key = "AIzaSyAKqZ1Dx9awi1lCS84qziASeQYZJqLxLSM";
-    const playlist = "PLUcaufaEsTHA0MA_IcgsC_AQ86TpBOYOw";
-    const num = 6;
-    const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlist}&maxResults=${num}`;
-
-    axios.get(url).then((json) => {
-      setVids(json.data.items);
-    });
-  }, []);
+  const { youtube } = useSelector((store) => store.youtubeReducer);
+  console.log(youtube)
 
   return (
     <>
-      <main id="vids" className="myScroll">
-        <Swiper
-          modules={[Pagination, Navigation]}
-          pagination={{
-            clickable: false,
-          }}
-          spaceBetween={60}
-          navigation={true}
-          loop={true}
-          slidesPerView={3}
-          centeredSlides={true}
-        >
-          {Vids.map((data, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <article>
-                  <div
-                    key={index}
-                    className="inner"
-                    onClick={() => {
-                      pop.current.open();
-                      setIndex(index);
-                    }}
-                  >
-                    <img
-                      src={data.snippet.thumbnails.standard.url}
-                      alt={data.snippet.title}
-                    />
-                  </div>
-                </article>
-              </SwiperSlide>
-            );
-          })}
+      <main id="vids" className='myScroll'>
+        {youtube.length !== 0 && (
+          <Swiper
+            ref={sw}
+            modules={[Pagination, Navigation, Autoplay]}
+            pagination={
+              {
+                clickable: true,
+              }
+            }
+            spaceBetween={60}
+            navigation={true}
+            loop={true}
+            slidesPerView={'auto'}
+            centeredSlides={true}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: true,
+            }}
+            //min-width 값을 설정해서 브라우저 폭마다 swiper 옵션설정 변경가능
+            breakpoints={{
+              320: {
+                slidesPerView: 1
+              },
+              580: {
+                slidesPerView: 'auto'
+              }
 
-        </Swiper>
+            }}
+          >
+            {
+              youtube.map((vid, idx) => {
+                return (
+                  <SwiperSlide key={idx}>
+                    <div className="inner">
+                      <div className="pic" onClick={() => {
+                        pop.current.open();
+                        setIndex(idx);
+                        sw.current.swiper.autoplay.stop();
+                      }}>
+                        <img src={vid.snippet.thumbnails.standard.url} />
+                      </div>
+                      <h2>{vid.snippet.title}</h2>
+                    </div>
+                  </SwiperSlide>
+                )
+              })}
+          </Swiper>
+        )}
         <video src={process.env.PUBLIC_URL + '/img/sky.mp4'} loop autoPlay muted></video>
       </main>
-      <Popup ref={pop} className='popup'>
-        {Vids.length !== 0 && (
-          <iframe
-            src={`https://www.youtube.com/embed/${Vids[Index].snippet.resourceId.videoId}`}
-            frameBorder="0"
-          ></iframe>
+
+      <Popup ref={pop}>
+        {youtube.length !== 0 && (
+          <iframe src={`https://www.youtube.com/embed/${youtube[Index].snippet.resourceId.videoId}`} frameBorder='0'></iframe>
         )}
       </Popup>
     </>
