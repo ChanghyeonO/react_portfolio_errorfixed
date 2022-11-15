@@ -1,7 +1,4 @@
 .Member {
-	// figure {
-	// 	background: #bbb;
-	// }
 	> .inner {
 		table {
 			width: 100%;
@@ -30,7 +27,7 @@
 			td {
 				border: none;
 				border-bottom: 1px solid #bbb;
-				padding: 15px 50px;
+				padding: 25px 50px;
 
 				input[type="text"],
 				input[type="password"],

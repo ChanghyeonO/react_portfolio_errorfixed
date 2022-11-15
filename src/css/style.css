@@ -601,7 +601,6 @@ header.main .inner .fa-bars {
 }
 .Community > .inner .inputBox {
   width: 100%;
-  border: 2px solid #000;
   padding: 50px;
   margin-bottom: 50px;
 }
@@ -609,6 +608,7 @@ header.main .inner .fa-bars {
 .Community > .inner .inputBox textarea {
   width: 100%;
   padding: 15px 20px;
+  border: 2px solid #000;
   margin-bottom: 10px;
   resize: none;
   font: bold 15px/1 "arial";
@@ -627,11 +627,10 @@ header.main .inner .fa-bars {
 }
 .Community > .inner .showBox {
   width: 100%;
-  border: 2px solid #000;
   padding: 50px;
 }
 .Community > .inner .showBox article {
-  border: 2px solid #000;
+  border-bottom: 2px solid #000;
   background: #fff;
   padding: 15px;
   margin-bottom: 40px;
@@ -793,7 +792,7 @@ header.main .inner .fa-bars {
   align-items: center;
 }
 .Gallery .controls nav {
-  padding: 10px;
+  padding: 15px;
   display: flex;
   gap: 20px;
 }
@@ -895,17 +894,17 @@ header.main .inner .fa-bars {
   section .frame article {
     width: 33.3333%;
   }
-  .Gallery .controls .searchBox input {
-    position: relative;
-  }
-  .Gallery .controls .searchBox button {
-    position: relative;
-    border: 50px;
-  }
 }
 @media screen and (max-width: 539px) {
   section .frame article {
-    width: 100%;
+    width: 50%;
+  }
+  .Gallery .controls .searchBox input {
+    position: absolute;
+    top: 9%;
+    width: 95%;
+    right: 3%;
+    left: 1;
   }
 }
 .Location #map {
@@ -973,7 +972,7 @@ header.main .inner .fa-bars {
 .Member > .inner table td {
   border: none;
   border-bottom: 1px solid #bbb;
-  padding: 15px 50px;
+  padding: 25px 50px;
 }
 .Member > .inner table td input[type=text],
 .Member > .inner table td input[type=password],

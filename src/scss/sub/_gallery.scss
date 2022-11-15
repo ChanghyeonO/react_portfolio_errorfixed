@@ -11,7 +11,7 @@
 		justify-content: space-between;
 		align-items: center;
 		nav {
-			padding: 10px;
+			padding: 15px;
 			display: flex;
 			gap: 20px;
 			button {
@@ -119,26 +119,51 @@
 	section .frame article {
 		width: 33.3333%;
 	}
-	.Gallery {
-		.controls {
-			.searchBox {
-				input {
-					position: relative;
-					// top: 10%;
-					// width: 100%;
-				}
+	// .Gallery {
+	// 	.controls {
+	// 		.searchBox {
+	// 			input {
+	// 				position: relative;
+	// 				top: 10%;
+	// 				// width: 50%;
+	// 				right: 58%;
+	// 			}
 
-				button {
-					position: relative;
-					border: 50px;
-				}
-			}
-		}
-	}
+	// 			button {
+	// 				position: relative;
+	// 				border: 50px;
+	// 				// right: 10px;
+	// 			}
+	// 		}
+	// 	}
+	// 	.frame {
+	// 		position: relative;
+	// 		width: 100%;
+	// 	}
+	// }
 }
 
 @media screen and (max-width: $mobile) {
 	section .frame article {
-		width: 100%;
+		width: 50%;
+	}
+	.Gallery {
+		.controls {
+			.searchBox {
+				input {
+					position: absolute;
+					top: 9%;
+					width: 95%;
+					right: 3%;
+					left: 1;
+				}
+
+				// button {
+				// 	// position: absolute;
+				// 	// border: 50px;
+				// 	// right: 10px;
+				// }
+			}
+		}
 	}
 }
